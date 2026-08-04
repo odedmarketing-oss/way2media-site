@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Way2Media — Performance Marketing</title>
+<meta name="description" content="Way2Media connects advertisers and publishers with tested, high-converting traffic sources. Lead generation, media buying, affiliate management and conversion optimization.">
+<meta property="og:title" content="Way2Media">
+<meta property="og:description" content="High-converting traffic. Real results. Performance marketing built on tested traffic sources.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://way2media.com">
+<meta name="theme-color" content="#0D1F15">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0D1F15;
+  --bg2:#14291C;
+  --panel:#12271B;
+  --ink:#FFFFFF;
+  --dim:#A7C0B1;
+  --green:#4ADE80;
+  --green-soft:#86EFAC;
+  --line:rgba(74,222,128,.22);
+  --wire:rgba(74,222,128,.16);
+  --maxw:1120px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:linear-gradient(180deg,var(--bg2),var(--bg));
+  color:var(--ink);
+  font-family:'Archivo',sans-serif;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--green);color:var(--bg)}
+a:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+
+/* logo */
+.vsign{display:inline-block;vertical-align:middle}
+
+/* header */
+header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(13,31,21,.85);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(74,222,128,.12);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.mark{font-weight:800;font-size:17px;letter-spacing:.08em;display:flex;align-items:center;gap:8px}
+.nav-links{display:flex;gap:32px;font-size:15px;color:var(--dim)}
+.nav-links a:hover,.nav-links a:focus-visible{color:var(--ink)}
+
+/* hero */
+.hero{
+  min-height:92vh;position:relative;overflow:hidden;
+  display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
+  border-bottom:1px solid var(--line);
+}
+.cityscape{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero .wrap{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center}
+.hero-logo{font-weight:800;font-size:clamp(52px,9vw,120px);letter-spacing:.02em;line-height:1;display:flex;align-items:center;gap:.12em}
+.slate{margin-top:22px;font-size:15px;letter-spacing:.42em;text-transform:uppercase;color:var(--ink)}
+.badge{
+  margin-top:52px;padding:12px 30px;border:1px solid var(--green);border-radius:999px;
+  background:rgba(74,222,128,.08);color:var(--green-soft);font-weight:600;font-size:17px;
+}
+h1{margin-top:34px;font-weight:800;font-size:clamp(38px,5.6vw,68px);line-height:1.12;max-width:18ch}
+h1 em{font-style:normal;color:var(--green)}
+.hero p{margin-top:26px;max-width:60ch;font-size:19px;color:var(--dim)}
+.cta-row{display:flex;gap:16px;margin-top:44px;flex-wrap:wrap;justify-content:center}
+.btn{
+  display:inline-block;padding:15px 36px;font-size:16px;font-weight:600;border-radius:999px;
+  transition:transform .15s,background .2s,color .2s,border-color .2s;
+}
+.btn.solid{background:var(--green);color:#07130C}
+.btn.solid:hover{background:var(--green-soft);transform:translateY(-1px)}
+.btn.ghost{border:1px solid var(--green);color:var(--green-soft)}
+.btn.ghost:hover{background:rgba(74,222,128,.1)}
+
+/* sections */
+section{padding:110px 0;border-bottom:1px solid rgba(74,222,128,.12)}
+.eyebrow{font-size:13px;letter-spacing:.34em;text-transform:uppercase;color:var(--green);margin-bottom:18px;font-weight:600}
+h2{font-weight:800;font-size:clamp(30px,4vw,44px);line-height:1.15;max-width:24ch}
+.lede{margin-top:22px;max-width:60ch;font-size:18px;color:var(--dim)}
+.lede strong{color:var(--ink);font-weight:600}
+
+.split{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:52px}
+.card{
+  background:var(--panel);border:1px solid rgba(74,222,128,.18);border-radius:18px;padding:34px;
+}
+.card h3{font-weight:700;font-size:19px;margin-bottom:12px;color:var(--green-soft)}
+.card p{color:var(--dim);font-size:16px}
+
+/* services */
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-top:56px}
+.svc{
+  background:var(--panel);border:1px solid rgba(74,222,128,.18);border-radius:18px;padding:32px;
+  transition:border-color .2s,transform .15s;
+}
+.svc:hover{border-color:var(--green);transform:translateY(-2px)}
+.svc h3{font-weight:700;font-size:19px;margin-bottom:10px}
+.svc p{color:var(--dim);font-size:15.5px}
+.svc .dot{width:10px;height:10px;border-radius:50%;background:var(--green);display:block;margin-bottom:18px;box-shadow:0 0 12px var(--green)}
+
+/* why */
+.why-list{margin-top:48px;display:grid;grid-template-columns:1fr 1fr;gap:18px 40px;max-width:900px}
+.why-item{display:flex;gap:14px;align-items:flex-start;color:var(--dim);font-size:17px}
+.why-item svg{flex:none;margin-top:5px}
+
+/* contact */
+.contact-box{margin-top:44px;display:flex;flex-direction:column;gap:10px}
+.contact-label{font-size:13px;letter-spacing:.34em;text-transform:uppercase;color:var(--dim)}
+.contact-mail{
+  font-weight:700;font-size:clamp(22px,3.4vw,38px);width:fit-content;color:var(--green-soft);
+  border-bottom:2px solid var(--green);padding-bottom:4px;transition:color .2s;
+}
+.contact-mail:hover{color:var(--green)}
+
+/* footer */
+footer{padding:48px 0 56px}
+.foot{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:flex-end}
+.foot-legal{font-size:14px;color:var(--dim);line-height:1.8}
+.foot-mark{font-weight:800;font-size:15px;letter-spacing:.08em;display:flex;align-items:center;gap:6px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none;transition:none}
+}
+@media (max-width:760px){
+  .nav-links{gap:18px;font-size:14px}
+  .split,.why-list{grid-template-columns:1fr}
+  section{padding:80px 0}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute"><defs>
+<g id="vsign-shape">
+  <path d="M8 2 L12 16 L16 2" fill="none" stroke="var(--green)" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M9 16 h6 v7 a3 3 0 0 1 -3 3 a3 3 0 0 1 -3 -3 z" fill="var(--green)"/>
+</g>
+</defs></svg>
+
+<header>
+  <div class="wrap nav">
+    <a class="mark" href="#top">WAY <svg class="vsign" width="20" height="26" viewBox="0 0 24 28" aria-hidden="true"><use href="#vsign-shape"/></svg> MEDIA</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#top">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <svg class="cityscape" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true" fill="none" stroke="var(--wire)" stroke-width="2">
+    <circle cx="180" cy="220" r="150"/>
+    <circle cx="1300" cy="180" r="110"/>
+    <circle cx="120" cy="760" r="46"/>
+    <path d="M320 200 a70 70 0 0 1 138 -14 a56 56 0 0 1 96 40 h-260 a52 52 0 0 1 26 -26z"/>
+    <path d="M480 320 a54 54 0 0 1 106 -10 a44 44 0 0 1 72 32 h-200 a40 40 0 0 1 22 -22z"/>
+    <!-- skyline -->
+    <path d="M0 900 V640 h90 V600 h70 V900"/>
+    <path d="M200 900 V560 h80 v-40 h30 v40 h40 V900"/>
+    <path d="M420 900 V700 h120 V660 h60 V900"/>
+    <path d="M660 900 V520 l40 -60 40 60 V900"/>
+    <path d="M700 460 v-80 m0 -30 v-20 m-14 34 h28"/>
+    <path d="M900 900 V620 h100 V580 h50 V900"/>
+    <path d="M1120 900 V500 h60 l30 -50 30 50 h60 V900"/>
+    <path d="M1210 450 v-70 m-12 12 h24"/>
+    <path d="M1050 900 V740 h60 V900"/>
+    <rect x="230" y="600" width="18" height="26"/><rect x="270" y="600" width="18" height="26"/>
+    <rect x="930" y="660" width="16" height="22"/><rect x="965" y="660" width="16" height="22"/>
+    <rect x="1150" y="560" width="18" height="24"/><rect x="1190" y="560" width="18" height="24"/>
+  </svg>
+  <div class="wrap">
+    <div class="hero-logo rv">WAY <svg class="vsign" width=".82em" height="1em" viewBox="0 0 24 28" aria-hidden="true"><use href="#vsign-shape"/></svg> MEDIA</div>
+    <div class="slate rv">Your journey begins</div>
+    <div class="badge rv">High-Converting Traffic. Real Results.</div>
+    <h1 class="rv">Connect to <em>High-Converting</em> Traffic Sources</h1>
+    <p class="rv">Way2media connects advertisers and publishers with high-quality traffic sources in a streamlined, data-driven way.</p>
+    <div class="cta-row rv">
+      <a class="btn solid" href="#contact">Get Started →</a>
+      <a class="btn ghost" href="#services">Our Services</a>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="eyebrow rv">About Way2media</div>
+    <h2 class="rv">We only run what we've tested</h2>
+    <p class="lede rv">Every source we work with has been vetted against real performance data before it carries a single campaign. <strong>No experiments at your expense.</strong></p>
+    <div class="split">
+      <div class="card rv">
+        <h3>Our mission</h3>
+        <p>Help advertisers scale campaigns with consistency, efficiency and real-world results — using traffic that has already proven it converts.</p>
+      </div>
+      <div class="card rv">
+        <h3>How we work</h3>
+        <p>We prioritize long-term partnerships over one-off wins, and let performance data guide every routing, budget and creative decision.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="eyebrow rv">What we do</div>
+    <h2 class="rv">Full-stack performance marketing</h2>
+    <div class="svc-grid">
+      <div class="svc rv"><span class="dot"></span><h3>Lead Generation</h3><p>Targeted campaigns that deliver qualified leads ready to convert into customers.</p></div>
+      <div class="svc rv"><span class="dot"></span><h3>Media Buying &amp; Traffic Acquisition</h3><p>Strategic placements across premium networks to maximize reach and return.</p></div>
+      <div class="svc rv"><span class="dot"></span><h3>Affiliate Program Management</h3><p>End-to-end affiliate network management to scale your partnerships effectively.</p></div>
+      <div class="svc rv"><span class="dot"></span><h3>Funnel &amp; Conversion Optimization</h3><p>Data-driven optimization that lifts conversion rates and customer lifetime value.</p></div>
+      <div class="svc rv"><span class="dot"></span><h3>Performance Analytics &amp; Reporting</h3><p>Real-time insight and transparent reporting on every campaign you run with us.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow rv">Why choose Way2media</div>
+    <h2 class="rv">Built for advertisers who scale</h2>
+    <div class="why-list">
+      <div class="why-item rv"><svg width="18" height="18" viewBox="0 0 18 18"><path d="M2 9.5 L7 14 L16 4" fill="none" stroke="var(--green)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Data-driven strategies backed by real performance metrics</div>
+      <div class="why-item rv"><svg width="18" height="18" viewBox="0 0 18 18"><path d="M2 9.5 L7 14 L16 4" fill="none" stroke="var(--green)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Dedicated account management and 24/7 support</div>
+      <div class="why-item rv"><svg width="18" height="18" viewBox="0 0 18 18"><path d="M2 9.5 L7 14 L16 4" fill="none" stroke="var(--green)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Transparent reporting and real-time campaign insights</div>
+      <div class="why-item rv"><svg width="18" height="18" viewBox="0 0 18 18"><path d="M2 9.5 L7 14 L16 4" fill="none" stroke="var(--green)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Scalable solutions that grow with your business</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="eyebrow rv">Get in touch</div>
+    <h2 class="rv">Ready to elevate your digital performance?</h2>
+    <p class="lede rv">Tell us what you're running and where you want it to go.</p>
+    <div class="contact-box rv">
+      <span class="contact-label">Email</span>
+      <a class="contact-mail" href="mailto:odedmarketing@gmail.com">odedmarketing@gmail.com</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div class="foot-legal rv">
+      Way2Media is a brand of W2M Limited, incorporated in Hong Kong<br>
+      © 2026 Way2Media. All rights reserved.
+    </div>
+    <div class="foot-mark rv">WAY <svg class="vsign" width="16" height="21" viewBox="0 0 24 28" aria-hidden="true"><use href="#vsign-shape"/></svg> MEDIA</div>
+  </div>
+</footer>
+
+<script>
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>
